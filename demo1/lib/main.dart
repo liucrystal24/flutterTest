@@ -1,52 +1,29 @@
 import 'package:flutter/material.dart';
-import 'page_alive.dart';
+import 'Cpage.dart';
 
 void main()=>runApp(MaterialApp(
   title: 'pageAlive',
-  home: PageAlive(),
+  home: TestHome(),
 ));
 
-class PageAlive extends StatefulWidget {
-  @override
-  _PageAliveState createState() => _PageAliveState();
-}
-
-class _PageAliveState extends State<PageAlive> with SingleTickerProviderStateMixin{
-  // 申明类型
-  TabController _tabcontroller;
-  @override
-  void initState(){
-    super.initState();
-    //定义参数
-    _tabcontroller  = TabController(length: 3,vsync: this);
-  }
-  @override
-  void dispose(){
-    _tabcontroller.dispose();  
-    super.dispose();
-  }
+class TestHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('PageAlive2'),
-        bottom: TabBar(
-          controller: _tabcontroller,
-          tabs: <Widget>[
-            Tab(icon:Icon(Icons.directions_bus)),
-            Tab(icon:Icon(Icons.directions_car)),
-            Tab(icon:Icon(Icons.directions_boat))
-          ],
-        ),
-      ),
-      body: TabBarView(
-        controller: _tabcontroller,
+      appBar: AppBar(title: Text('Flutter')),
+      body: ListView(
         children: <Widget>[
-          Apage(),
-          Apage(),
-          Apage(),
+          ListTile(
+            // leading: new Icon(Icons.perm_camera_mic),
+            title: new Text('1. Keep Page alive'),
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context)=> new PageAlive() //跳转到第二屏
+              ));
+            },
+          ),
         ],
-      ) 
+      )
     );
   }
 }
