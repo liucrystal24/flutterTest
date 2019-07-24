@@ -29,7 +29,7 @@ class _PageAliveState extends State<PageAlive> with SingleTickerProviderStateMix
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('PageAlive'),
+        title: Text('windows companym'),
         bottom: TabBar(
           controller: _tabcontroller,
           tabs: <Widget>[
