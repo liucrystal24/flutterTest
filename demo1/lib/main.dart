@@ -10,7 +10,7 @@ class TestHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Flutter')),
+      appBar: AppBar(title: Text('dev branch test')),
       body: ListView(
         children: <Widget>[
           ListTile(
