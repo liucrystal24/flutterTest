@@ -50,7 +50,6 @@ class Searchdelegate extends SearchDelegate{
   //2. 左侧 <- 关闭searchbar
   @override
   Widget buildLeading(BuildContext context) {
-    // TODO: implement buildLeading
     return IconButton(
       icon: AnimatedIcon(
         icon: AnimatedIcons.arrow_menu,
@@ -62,7 +61,6 @@ class Searchdelegate extends SearchDelegate{
   //3. 点击搜索后完毕展示结果
   @override
   Widget buildResults(BuildContext context) {
-    // TODO: implement buildResults
     return Container(
       width: 100,
       height: 100,
@@ -77,7 +75,8 @@ class Searchdelegate extends SearchDelegate{
   //4. 下方建议列表
   @override
   Widget buildSuggestions(BuildContext context) {
-    // TODO: implement buildSuggestions
+    // suggestList 是推荐菜单，本应从后台模拟，但是此处为写死数据
+    // searchList 是通过搜索query 关键字，模拟的数据，为死数据
     final suggestionList = query.isEmpty
     ?suggestList
     :searchList.where((input)=>input.startsWith(query)).toList();
