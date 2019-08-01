@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Cpage.dart';
+import 'Csearch.dart';
 
 void main()=>runApp(MaterialApp(
   title: 'pageAlive',
@@ -19,6 +20,15 @@ class TestHome extends StatelessWidget {
             onTap: (){
               Navigator.push(context, MaterialPageRoute(
                 builder: (context)=> new PageAlive() //跳转到第二屏
+              ));
+            },
+          ),
+          ListTile(
+            // leading: new Icon(Icons.perm_camera_mic),
+            title: new Text('2. SearchBar'),
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context)=> new Search() //跳转到第二屏
               ));
             },
           ),
