@@ -11,7 +11,7 @@ class _WrapPicState extends State<WrapPic> {
   @override
   void initState() {
     super.initState();
-    list..add(addbutton());
+    list.add(addbutton());
   }
 
   @override
