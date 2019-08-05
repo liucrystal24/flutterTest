@@ -34,6 +34,8 @@ class _ExpansionPanelListdemoState extends State<ExpansionPanelListdemo> {
   //控制开关的开闭函数
   _currentState(index,bol){
     setState(() {
+      //可以直接下标去反
+      //expansionlist[index].isOpen = !bol;
       expansionlist.forEach((item){
         if (item.index == index){
           item.isOpen = !bol;
