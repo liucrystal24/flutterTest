@@ -9,7 +9,7 @@ class _ExpansionPanelListdemoState extends State<ExpansionPanelListdemo> {
   List<int> mlist;
   List<ExpansionBean> expansionlist;
 
-  //这里直接调用这个类？？叫什么 与initstate区别？
+  //内部的构造方法，刚调用类，就执行， 与initstate区别？实测 initState 可以运行
   _ExpansionPanelListdemoState(){
     mlist = new List();
     expansionlist = new List();
@@ -19,7 +19,19 @@ class _ExpansionPanelListdemoState extends State<ExpansionPanelListdemo> {
       expansionlist.add(ExpansionBean(i, false));
     }
   }
+  // @override
+  // void initState(){
+  //   mlist = new List();
+  //   expansionlist = new List();
+  //   for(int i= 0;i<10;i++){
+  //     mlist.add(i);
+  //     //类型与类申明一致
+  //     expansionlist.add(ExpansionBean(i, false));
+  //   }
+  //   super.initState();
+  // }
 
+  //控制开关的开闭函数
   _currentState(index,bol){
     setState(() {
       expansionlist.forEach((item){
@@ -43,7 +55,7 @@ class _ExpansionPanelListdemoState extends State<ExpansionPanelListdemo> {
           //根据list的个数，插入 ExpansionPanel,并继续生成List
           children: mlist.map((index){
             return ExpansionPanel(
-              //什么时候是(){},什么时候是{}/()
+              //Fun ->(){},widget->()
               headerBuilder: (context,bol){
                 return ListTile(title: Text('This is No.$index'));
               },
@@ -57,7 +69,7 @@ class _ExpansionPanelListdemoState extends State<ExpansionPanelListdemo> {
   }
 }
 
-//??为什么要申明这个类，每个小项的开关管理
+//每个小项的开关管理，申明类
 class ExpansionBean{
   var index;
   bool isOpen;
