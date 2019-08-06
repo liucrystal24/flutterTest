@@ -7,6 +7,21 @@ import 'CexpansionTile.dart';
 import 'CexpansionPanelList.dart';
 import 'CpathClip.dart';
 
+//字体引入
+class ChrisIcons {
+  ChrisIcons._();
+
+  static const String FONT_FAMILY='Chris';
+
+  static const IconData heart = const IconData(0xe8c7 ,fontFamily: FONT_FAMILY);
+  static const IconData email = const IconData(0xe8c8, fontFamily: FONT_FAMILY);
+  static const IconData home = const IconData(0xe8c9, fontFamily: FONT_FAMILY);
+  static const IconData man = const IconData(0xe8ca,fontFamily: FONT_FAMILY);
+  static const IconData diamond = const IconData(0xe8cb, fontFamily: FONT_FAMILY);
+  static const IconData cake= const IconData(0xe8ce, fontFamily: FONT_FAMILY);
+  static const IconData love = const IconData(0xe8cf, fontFamily: FONT_FAMILY);
+}
+
 void main()=>runApp(MaterialApp(
   title: 'pageAlive',
   theme: ThemeData.light(),
@@ -24,7 +39,7 @@ class TestHome extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           ListTile(
-            // leading: new Icon(Icons.perm_camera_mic),
+            leading: new Icon(ChrisIcons.love),
             title: new Text('1. Keep Page alive'),
             onTap: (){
               Navigator.push(context, MaterialPageRoute(
