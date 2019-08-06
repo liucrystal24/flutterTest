@@ -4,6 +4,7 @@ import 'Csearch.dart';
 import 'Cwrap.dart';
 import 'CexpansionTile.dart';
 import 'CexpansionPanelList.dart';
+import 'CpathClip.dart';
 
 void main()=>runApp(MaterialApp(
   title: 'pageAlive',
@@ -60,6 +61,15 @@ class TestHome extends StatelessWidget {
             onTap: (){
               Navigator.push(context, MaterialPageRoute(
                 builder: (context)=> new ExpansionPanelListdemo() //跳转到第二屏
+              ));
+            },
+          ),
+          ListTile(
+            // leading: new Icon(Icons.perm_camera_mic),
+            title: new Text('6. PathClip(Bezier)'),
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context)=> new PathClipDemo() //跳转到第二屏
               ));
             },
           ),
