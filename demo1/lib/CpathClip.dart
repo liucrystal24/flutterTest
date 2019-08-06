@@ -4,6 +4,7 @@ class PathClipDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar:AppBar(title: Text('PathClip'),),
       //裁切控件
       body: ClipPath(
         clipper: Buttomclip(),

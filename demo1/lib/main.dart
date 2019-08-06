@@ -10,7 +10,9 @@ import 'CpathClip.dart';
 void main()=>runApp(MaterialApp(
   title: 'pageAlive',
   theme: ThemeData.light(),
+  //splash 动画
   home: Splashscreen(),
+  // home: TestHome(),
   debugShowCheckedModeBanner: false,
 ));
 
