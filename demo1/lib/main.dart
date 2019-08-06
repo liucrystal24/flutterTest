@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'splashScreen.dart';
 import 'Cpage.dart';
 import 'Csearch.dart';
 import 'Cwrap.dart';
@@ -9,7 +10,8 @@ import 'CpathClip.dart';
 void main()=>runApp(MaterialApp(
   title: 'pageAlive',
   theme: ThemeData.light(),
-  home: TestHome(),
+  home: Splashscreen(),
+  debugShowCheckedModeBanner: false,
 ));
 
 class TestHome extends StatelessWidget {
